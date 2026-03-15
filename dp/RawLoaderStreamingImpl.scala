@@ -192,7 +192,7 @@ object RawLoaderStreamingImpl extends Logging {
       .receiver()
       .topicName(topic)
       .subscriptionName(subscription)
-      .maxAutoLockRenewDuration(Duration.ZERO)
+      .maxAutoLockRenewDuration(Duration.ofMinutes(30))
       .disableAutoComplete()
       .prefetchCount(0)
   }
